@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeleCare — Doctor Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit">Tele<span>Care</span></a></div>
+    <nav><a href="patient.html">Patient view</a></nav>
+  </header>
+
+  <main class="wrap">
+    <div class="banner" id="escBanner">🚨 Critical case escalated — see top of queue.</div>
+
+    <section class="card">
+      <h2><span class="live-dot"></span>Today's queue — triage order</h2>
+      <p class="sub">Sorted by severity score, not arrival time. <span id="qCount"></span></p>
+      <div style="overflow-x:auto">
+        <table class="q">
+          <thead>
+            <tr><th>#</th><th>Patient</th><th class="hide-sm">Symptoms</th><th>Score</th><th>Tier</th><th>Status</th><th></th></tr>
+          </thead>
+          <tbody id="qBody"></tbody>
+        </table>
+      </div>
+      <p class="muted" id="emptyMsg" style="margin-top:12px">Queue is empty — open <a href="patient.html">patient view</a> in another tab to add bookings.</p>
+    </section>
+
+    <section class="card">
+      <h2>Queue stats</h2>
+      <p class="sub">Live from the triage service</p>
+      <div id="stats" style="display:flex; gap:28px; flex-wrap:wrap"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/doctor.js"></script>
+</body>
+</html>

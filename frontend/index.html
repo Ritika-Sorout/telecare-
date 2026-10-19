@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeleCare — Smart Telemedicine Triage</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Tele<span>Care</span></div>
+    <nav><a href="patient.html">Patient</a><a href="doctor.html">Doctor</a></nav>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Telemedicine that triages,<br>not just queues.</h1>
+      <p>Book a consultation, describe your symptoms, and let the triage engine
+         order the queue by medical urgency — live, in your browser.</p>
+      <div class="role-grid" style="text-align:left">
+        <a class="role-card" href="patient.html">
+          <h2>🩺 I'm a Patient</h2>
+          <p>Book an appointment, complete the symptom intake, and watch your
+             live position in the smart queue.</p>
+          <span class="cta">Start booking →</span>
+        </a>
+        <a class="role-card" href="doctor.html">
+          <h2>👩‍⚕️ I'm a Doctor</h2>
+          <p>See today's queue pre-sorted by triage severity, with escalation
+             alerts for critical cases.</p>
+          <span class="cta">Open dashboard →</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="steps">
+      <div class="step"><span class="n">1</span><h3>Symptom intake</h3>
+        <p>Patients pick symptoms and risk factors. Every input is structured data, not free text.</p></div>
+      <div class="step"><span class="n">2</span><h3>Triage scoring</h3>
+        <p>The Node.js service scores severity from symptom weights × risk multipliers and re-sorts the queue.</p></div>
+      <div class="step"><span class="n">3</span><h3>Live waiting room</h3>
+        <p>Positions, ETAs and escalation alerts stream to every screen over WebSockets — no refresh needed.</p></div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,17 @@
+com/telecare/config/CorsConfig$1.class
+com/telecare/model/Doctor.class
+com/telecare/TeleCareApplication.class
+com/telecare/controller/AppointmentController.class
+com/telecare/repository/AppointmentRepository.class
+com/telecare/model/Appointment.class
+com/telecare/model/Prescription.class
+com/telecare/repository/PrescriptionRepository.class
+com/telecare/repository/PatientRepository.class
+com/telecare/DataSeeder.class
+com/telecare/dto/IntakeRecordRequest.class
+com/telecare/model/Patient.class
+com/telecare/controller/PrescriptionController.class
+com/telecare/repository/DoctorRepository.class
+com/telecare/controller/DoctorController.class
+com/telecare/config/CorsConfig.class
+com/telecare/controller/PatientController.class

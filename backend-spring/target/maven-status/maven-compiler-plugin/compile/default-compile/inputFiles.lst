@@ -1,0 +1,16 @@
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/controller/AppointmentController.java
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/DataSeeder.java
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/repository/PatientRepository.java
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/config/CorsConfig.java
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/model/Patient.java
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/TeleCareApplication.java
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/model/Doctor.java
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/model/Appointment.java
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/controller/DoctorController.java
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/dto/IntakeRecordRequest.java
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/model/Prescription.java
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/controller/PrescriptionController.java
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/repository/PrescriptionRepository.java
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/repository/DoctorRepository.java
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/repository/AppointmentRepository.java
+/Users/ritika/Downloads/telecare/backend-spring/src/main/java/com/telecare/controller/PatientController.java

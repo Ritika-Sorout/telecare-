@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeleCare — Book Appointment</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a href="index.html" style="text-decoration:none;color:inherit">Tele<span>Care</span></a></div>
+    <nav><a href="doctor.html">Doctor view</a></nav>
+  </header>
+
+  <main class="wrap">
+    <!-- STEP 1: intake form -->
+    <section class="card" id="intakeCard">
+      <h2>Book your consultation</h2>
+      <p class="sub">Tell us what's going on. The triage engine uses this to place you fairly in the queue.</p>
+
+      <div class="row2">
+        <div class="field"><label>Full name</label><input type="text" id="pname" placeholder="e.g. Ananya Rao"></div>
+        <div class="field"><label>Age</label><input type="number" id="page" min="1" max="120" value="28"></div>
+      </div>
+
+      <div class="field">
+        <label>Symptoms — tap all that apply</label>
+        <div class="chips" id="symptomChips"></div>
+      </div>
+
+      <div class="field">
+        <label>Risk factors</label>
+        <div class="checks">
+          <label><input type="checkbox" class="comorb" value="diabetes"> Diabetes</label>
+          <label><input type="checkbox" class="comorb" value="hypertension"> Hypertension</label>
+          <label><input type="checkbox" class="comorb" value="asthma"> Asthma</label>
+          <label><input type="checkbox" class="comorb" value="heart-disease"> Heart disease</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>How long have you had these symptoms?</label>
+        <select id="duration">
+          <option value="2">Less than 6 hours (sudden onset)</option>
+          <option value="12" selected>6 – 24 hours</option>
+          <option value="48">1 – 3 days</option>
+          <option value="168">More than 3 days</option>
+        </select>
+      </div>
+
+      <button class="btn" id="bookBtn">Book &amp; join queue</button>
+      <p class="muted" id="formMsg" style="margin-top:10px"></p>
+    </section>
+
+    <!-- STEP 2: live waiting room -->
+    <section class="card hidden center" id="waitingCard">
+      <p class="muted"><span class="live-dot"></span>Live waiting room</p>
+      <h2 style="margin-top:8px">You're in the queue, <span id="meName"></span></h2>
+      <div class="bignum" id="myPos">–</div>
+      <p class="muted">your position · <span id="myTier"></span> · est. wait <span id="myEta">–</span></p>
+      <div style="margin:24px 0 8px; text-align:left">
+        <h3 style="font-size:1rem; margin-bottom:8px">Queue right now</h3>
+        <ul class="queue" id="queueList"></ul>
+      </div>
+      <button class="btn ghost" id="leaveBtn">Leave queue</button>
+    </section>
+  </main>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/patient.js"></script>
+</body>
+</html>

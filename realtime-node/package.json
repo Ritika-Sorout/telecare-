@@ -1,0 +1,1 @@
+{"dependencies":{"cors":"^2.8.5","express":"^4.19.2","socket.io":"^4.7.5"},"description":"TeleCare real-time service: live triage queue, WebSocket waiting room, reminders","main":"server.js","name":"telecare-realtime","scripts":{"start":"node server.js"},"version":"1.0.0"}
