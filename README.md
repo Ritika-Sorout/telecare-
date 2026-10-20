@@ -56,4 +56,19 @@ cd backend-spring && ./mvnw spring-boot:run       # → http://localhost:8080
 |------------------|------------------------------------------------------|
 | `frontend/`      | Minimal interactive UI (landing, patient, doctor)    |
 | `realtime-node/` | Express + Socket.IO service, triage engine          |
-| `backend-spring/`| Spring Boot REST API + Hibernate ORM (next build)   |
+| `backend-spring/`| Spring Boot REST API + Hibernate ORM (+ Dockerfile) |
+
+## Deploying to Render (free tier)
+
+All service-to-service URLs are env-configurable, so nothing is hardcoded
+to localhost anymore:
+
+| Piece | Render type | Key setting |
+|-------|-------------|-------------|
+| `realtime-node/` | Web Service (Node) | Root dir `realtime-node`; env `SPRING_URL` = Spring's public URL |
+| `backend-spring/` | Web Service (Docker) | Root dir `backend-spring`; uses `Dockerfile` |
+| `frontend/` | Static Site | Publish dir `frontend`; then set `API` in `js/app.js` to the Node URL and redeploy |
+
+Push the repo to GitHub first; Render deploys from there. Free-tier services
+sleep after ~15 min idle (first request takes ~30–60s to wake), and H2 is
+in-memory so data resets on restart — fine for a demo, not for production.

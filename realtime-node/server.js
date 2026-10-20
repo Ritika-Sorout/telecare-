@@ -25,7 +25,12 @@ app.use(express.json());
 const server = http.createServer(app);
 const io = new Server(server, { cors: { origin: '*' } });
 
-const PORT = 4000;
+// Render/Heroku-style hosts assign the port via the PORT env var.
+// Locally PORT is unset, so it falls back to 4000.
+const PORT = process.env.PORT || 4000;
+// Where the Spring Boot backend lives. Locally it's localhost:8081;
+// on Render you set SPRING_URL in the dashboard (no code change needed).
+const SPRING_URL = process.env.SPRING_URL || 'http://localhost:8081';
 const AVG_CONSULT_MIN = 8; // used for ETA estimates
 
 // ---- In-memory live queue ----------------------------------------------
@@ -116,7 +121,7 @@ app.get('/api/stats', (req, res) => {
 // is down — Spring simply catches up on the next booking.
 async function persistIntake(entry) {
   try {
-    await fetch('http://localhost:8080/api/appointments/from-triage', {
+    await fetch(`${SPRING_URL}/api/appointments/from-triage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

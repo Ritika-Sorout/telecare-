@@ -1,4 +1,7 @@
 /* TeleCare shared helpers — API base, socket, small render utils. */
+// ★ AFTER DEPLOYING: replace the line below with your public API URL,
+//    e.g. const API = 'https://telecare-api.onrender.com';
+//    then redeploy the frontend. Local development keeps working untouched.
 const API = 'http://localhost:4000';
 const socket = io(API);
 
