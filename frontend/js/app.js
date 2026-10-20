@@ -2,7 +2,7 @@
 // ★ AFTER DEPLOYING: replace the line below with your public API URL,
 //    e.g. const API = 'https://telecare-api.onrender.com';
 //    then redeploy the frontend. Local development keeps working untouched.
-const API = 'http://localhost:4000';
+const API = 'https://telecare-api.onrender.com';
 const socket = io(API);
 
 // Symptom catalogue shown as tappable chips on the intake form.
