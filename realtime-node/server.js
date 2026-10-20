@@ -116,7 +116,7 @@ app.get('/api/stats', (req, res) => {
 // is down — Spring simply catches up on the next booking.
 async function persistIntake(entry) {
   try {
-    await fetch('http://localhost:8081/api/appointments/from-triage', {
+    await fetch('http://localhost:8080/api/appointments/from-triage', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
